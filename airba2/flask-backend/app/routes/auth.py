@@ -88,3 +88,13 @@ class RefreshToken(Resource):
             'access_token': access_token,
             'refresh_token': refresh_token
         }
+
+def register_auth_routes(api):
+    """
+    Регистрирует маршруты для аутентификации и пользователей
+    
+    Args:
+        api: Flask-RESTX API экземпляр
+    """
+    api.add_namespace(auth_ns)
+    return api

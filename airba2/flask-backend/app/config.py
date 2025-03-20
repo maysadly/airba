@@ -8,6 +8,9 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY') or '6257'
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+    # Настройки CORS
+    CORS_ORIGINS = os.getenv('CORS_ORIGINS', '*')
     CORS_HEADERS = 'Content-Type'
     
     # Настройки JWT
